@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+int main(void)
+{
+	/* Declare variables */
+	bool is_leap_year;
+	int year;
+	
+	/* Read the year from the console */
+	scanf("%d", &year);
+
+	/** Do not edit the code above **/
+
+	/****************************************************************/
+	/** Write your code below.                                     **/
+	/** The code you write must not include any printf statements. **/
+	/****************************************************************/
+
+	/* If year is a leap year, the variable is_leap_year should
+	   be assigned the value true, and false otherwise.         */
+
+	if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)  // if the years remainder when divided by 4 == 0 and year is not divisible by 100 OR   divided by 400 == 0 
+	{
+		is_leap_year = true;
+	}
+	else
+	{
+		is_leap_year = false;
+	}
+
+	/********************************/
+	/** End of your code           **/
+	/********************************/
+
+	/** Do not edit the code below **/
+
+	/* Display the output */
+	if (is_leap_year)
+	{
+		printf("leap year\n");
+	}
+	else
+	{
+		printf("not a leap year\n");
+	}
+
+	return 0;
+}
